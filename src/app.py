@@ -44,7 +44,7 @@ def handle_delete_member(id_member):
     member = jackson_family.delete_member(id_member)
     if member is None:
         return jsonify({"ERROR": "Member Does Not Exist"}), 404
-    return jsonify({"SUCCESS"}), 200
+    return jsonify({"SUCCESS": "Member Deleted"}), 200
 
 @app.route('/members', methods=['POST'])
 def handle_add_member():
